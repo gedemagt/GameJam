@@ -47,6 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\QuantumFrame\DrawerEditor.cs" />
      <Compile Include="Assets\Editor\QuantumFrame\QFrameEditor.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
