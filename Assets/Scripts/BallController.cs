@@ -28,6 +28,20 @@ public class BallController : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision)
 	{
+        if(collision.transform.tag != null) {
+            switch (collision.transform.tag) {
+                case "RightQFrame":
+                    transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.red);
+                    break;
+                case "LeftQFrame":
+                    transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.green);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
 		Vector3 normal = Vector3.zero;
 		
 		foreach(ContactPoint c in collision.contacts)
