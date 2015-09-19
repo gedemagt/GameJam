@@ -25,8 +25,10 @@ public class BallController : MonoBehaviour {
 	{
 		lastVelocity = rb.velocity;
 	}
-	
-	void OnCollisionEnter(Collision collision)
+
+    public Transform paddleTransform;
+
+    void OnCollisionEnter(Collision collision)
 	{
         if(collision.transform.tag != null) {
             switch (collision.transform.tag) {
@@ -42,24 +44,45 @@ public class BallController : MonoBehaviour {
 
         }
 
-		Vector3 normal = Vector3.zero;
-		
-		foreach(ContactPoint c in collision.contacts)
-		{
-			normal += c.normal;
-		}
-		
-		normal.Normalize();
-		
-		Vector3 inVelocity = lastVelocity;
-		
-		Vector3 outVelocity = bounciness * ( -2f * (Vector3.Dot(inVelocity,normal) * normal) + inVelocity );
+        Vector3 normal = Vector3.zero;
         Paddle paddle = collision.transform.GetComponent<Paddle>();
         if (paddle != null)
         {
-            outVelocity += Vector3.left * paddle.GetVelocity();
+            Debug.Log("Paddle Collision", gameObject);
+            Vector3 contactPoint = collision.contacts[0].point;
+            Vector3 paddlePos = paddle.transform.position;
+            paddlePos.x = (float)(paddlePos.x + Mathf.Sign(paddle.transform.position.x) * 0.4);
+            Vector3 relPos = contactPoint - paddlePos;
+            relPos.z = 0;
+            Vector3 relPosNorm = relPos / relPos.magnitude;
+            rb.velocity = rb.velocity.magnitude * relPosNorm;
         }
-		rb.velocity = outVelocity;
-	}
+
+        foreach (ContactPoint c in collision.contacts)
+        {
+            normal += c.normal;
+        }
+
+        normal.Normalize();
+
+        Vector3 inVelocity = lastVelocity;
+
+        Wall wall = collision.transform.GetComponent<Wall>();
+        if (wall != null)
+        {
+            //          outVelocity += Vector3.left * paddle.GetVelocity();
+            Debug.Log("Wall Collision", gameObject);
+            Vector3 outVelocity = bounciness * (-2f * (Vector3.Dot(inVelocity, normal) * normal) + inVelocity);
+            rb.velocity = outVelocity;
+            //if (Mathf.Sign(wall.transform.position.y) == 1)
+            //{
+            //    rb.position = rb.position + Vector3.down * ;
+            //}
+            //rb.position = rb.position + outVelocity * ((float) 0.2);
+            //position = newPos;
+
+        }
+        //rb.velocity = outVelocity;
+    }
 
 }
