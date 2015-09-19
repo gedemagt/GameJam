@@ -27,7 +27,7 @@ public class WallController : MonoBehaviour {
         Vector3 inVelocity = lastVelocity;
 
         Vector3 outVelocity = bounciness * (-2f * (Vector3.Dot(inVelocity, normal) * normal) + inVelocity);
-        outVelocity.x = -outVelocity.x;
+        outVelocity.y = -outVelocity.y;
         Debug.Log(outVelocity.x + " " + outVelocity.y + " " + outVelocity.z, rb);
 
         rb.velocity = outVelocity;
