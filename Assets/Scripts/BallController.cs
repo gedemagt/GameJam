@@ -47,7 +47,11 @@ public class BallController : MonoBehaviour {
 		Vector3 inVelocity = lastVelocity;
 		
 		Vector3 outVelocity = bounciness * ( -2f * (Vector3.Dot(inVelocity,normal) * normal) + inVelocity );
-		
+        Paddle paddle = collision.transform.GetComponent<Paddle>();
+        if (paddle != null)
+        {
+            outVelocity += Vector3.left * paddle.GetVelocity();
+        }
 		rb.velocity = outVelocity;
 	}
 

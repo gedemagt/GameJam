@@ -9,11 +9,14 @@ public class Paddle : MonoBehaviour {
     public float lengthScaler = 1.0f;
     public float minScale;
     public bool scaleAccordingToVariance = false;
+    private float velocity = 0.0f;
+    private float lastX;
 
 	// Use this for initialization
 	void Start () {
         startVar = frame.getXVariance();
         startScaleX = transform.localScale.x;
+        lastX = transform.position.x;
 	}
 	
 	// Update is called once per frame
@@ -21,7 +24,8 @@ public class Paddle : MonoBehaviour {
         int maxIndex = FindMax(frame.getWaveFunctionPhysics());
         float x = frame.localAxis.physicsXToUnity(frame.getXMean());
         transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
-
+        velocity = (x - lastX) / Time.deltaTime;
+        lastX = x;
         if (scaleAccordingToVariance)
         {    
             double currentVar = frame.getXVariance();
@@ -32,6 +36,8 @@ public class Paddle : MonoBehaviour {
         }
 
     }
+
+    public float GetVelocity() { return velocity; }
 
     private int FindMax(double[] input)
     {
