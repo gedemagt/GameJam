@@ -35,6 +35,7 @@ public class CatSpeaker : MonoBehaviour {
 
     void OnCollisionEnter(Collision c)
     {
+        if (gameObject.GetComponent<BallController>().isAttached) return;
         if (c.gameObject.GetComponent<Goal>() != null)
         {
             PlayAngryCat();

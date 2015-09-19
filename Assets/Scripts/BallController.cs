@@ -9,6 +9,7 @@ public class BallController : MonoBehaviour {
     public Sprite[] catBall;
     public Image imageSprite;
     private int catAniCount = 0;
+    public bool isAttached = false;
 	// Use this for initialization
 	void Start () {
         startPaddle.Attach(this);

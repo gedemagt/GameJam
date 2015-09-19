@@ -47,6 +47,7 @@ public class Paddle : MonoBehaviour {
     public void Attach(BallController ball)
     {
         attachedBall = ball;
+        ball.isAttached = true;
     }
 
     public void Detatch()
@@ -54,6 +55,7 @@ public class Paddle : MonoBehaviour {
         if (attachedBall != null)
         {
             attachedBall.GetComponent<Rigidbody>().velocity = shootVelocity + Vector3.up*velocity;
+            attachedBall.isAttached = false;
         }
         attachedBall = null;
     }
