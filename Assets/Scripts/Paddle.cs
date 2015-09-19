@@ -13,7 +13,7 @@ public class Paddle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         int maxIndex = FindMax(frame.getWaveFunctionPhysics());
-        float x = frame.getXAxis(QFrame.LOCAL)[maxIndex];
+        float x = frame.localAxis.physicsXToUnity(frame.getXMean());//frame.getXAxis(QFrame.LOCAL)[maxIndex];
         transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
     }
 
