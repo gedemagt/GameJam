@@ -488,6 +488,11 @@ public class QFrame : MonoBehaviour {
         return hamOp.getExpectationValue(currentWave);
 	}
 
+    public double getXVariance()
+    {
+        return posOp.getVariance(currentWave);
+    }
+
 	void OnDrawGizmos() {
 		Vector3 pos = transform.localPosition;
 		
