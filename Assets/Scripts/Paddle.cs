@@ -24,7 +24,6 @@ public class Paddle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        int maxIndex = FindMax(frame.getWaveFunctionPhysics());
         float x = frame.localAxis.physicsXToUnity(frame.getXMean());
         transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
         velocity = (frame.worldAxis.physicsXToUnity(frame.getXMean()) - lastX) / Time.deltaTime;
@@ -60,21 +59,5 @@ public class Paddle : MonoBehaviour {
     }
 
     public float GetVelocity() { return velocity; }
-
-    private int FindMax(double[] input)
-    {
-        double max = double.NegativeInfinity;
-        int index = 0;
-        for (int i = 0; i < input.Length; i++)
-        {
-            double val = input[i];
-            if (val > max)
-            {
-                max = val;
-                index = i;
-            }
-        }
-        return index;
-    }
 
 }

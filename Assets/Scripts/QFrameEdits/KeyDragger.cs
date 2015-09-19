@@ -20,6 +20,7 @@ public class KeyDragger : MonoBehaviour {
     void Start()
     {
         refresh();
+        frame.start();
     }
 
     /// <summary>
@@ -27,8 +28,6 @@ public class KeyDragger : MonoBehaviour {
     /// </summary>
     public void refresh()
     {
-
-        Debug.Log("REFRESH");
         if (frame == null) frame = transform.parent.GetComponent<QFrame>();
         Vector3 newPos = frame.getStartPoint();
         newPos.z = transform.position.z;
@@ -64,17 +63,11 @@ public class KeyDragger : MonoBehaviour {
 
     public void OnKeyDown()
     {
-        if (!isReset)
-        {
+
             frame.reset();
-            refresh();
-            isReset = true;
-        }
-        else
-        {
             frame.start();
             isReset = false;
             offset = gameObject.transform.position;
-        }
+        
     }
 }
