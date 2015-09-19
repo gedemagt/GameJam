@@ -12,7 +12,7 @@ public class EnvironmentController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        background.transform.rotation = Quaternion.Euler(new Vector3(background.transform.rotation.x, background.transform.rotation.y, background.transform.rotation.z + rotateionCounter) * Time.deltaTime);
+        background.transform.rotation = Quaternion.Euler(new Vector3(background.transform.rotation.x, background.transform.rotation.y, background.transform.rotation.z + rotateionCounter));
         rotateionCounter += 0.1f;
 	}
 }
