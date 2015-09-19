@@ -11,6 +11,9 @@ public class Paddle : MonoBehaviour {
     public bool scaleAccordingToVariance = false;
     private float velocity = 0.0f;
     private float lastX;
+    BallController attachedBall;
+    public Vector3 shootVelocity;
+    public KeyCode shoot;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +27,9 @@ public class Paddle : MonoBehaviour {
         int maxIndex = FindMax(frame.getWaveFunctionPhysics());
         float x = frame.localAxis.physicsXToUnity(frame.getXMean());
         transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
-        velocity = (x - lastX) / Time.deltaTime;
-        lastX = x;
+        velocity = (frame.worldAxis.physicsXToUnity(frame.getXMean()) - lastX) / Time.deltaTime;
+
+        lastX = frame.worldAxis.physicsXToUnity(frame.getXMean());
         if (scaleAccordingToVariance)
         {    
             double currentVar = frame.getXVariance();
@@ -34,7 +38,25 @@ public class Paddle : MonoBehaviour {
             if (newXscale > startScaleX) newXscale = startScaleX;
             transform.localScale = new Vector3(newXscale, transform.localScale.y, transform.localScale.z);
         }
+        if (attachedBall != null)
+        {
+            attachedBall.transform.position = transform.position;
+        }
+        if (Input.GetKey(shoot)) Detatch();
+    }
 
+    public void Attach(BallController ball)
+    {
+        attachedBall = ball;
+    }
+
+    public void Detatch()
+    {
+        if (attachedBall != null)
+        {
+            attachedBall.GetComponent<Rigidbody>().velocity = shootVelocity + Vector3.up*velocity;
+        }
+        attachedBall = null;
     }
 
     public float GetVelocity() { return velocity; }

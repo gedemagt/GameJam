@@ -6,6 +6,7 @@ public class Goal : MonoBehaviour {
 
     int Count = 0;
     public Text score;
+    public Paddle left;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,6 @@ public class Goal : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         Count++;
-        collision.gameObject.GetComponent<BallController>().Reset();
+        left.Attach(collision.gameObject.GetComponent<BallController>());
     }
 }
