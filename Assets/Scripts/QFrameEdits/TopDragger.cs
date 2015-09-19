@@ -3,9 +3,6 @@ using System.Collections;
 
 public class TopDragger : DraggerAbstract {
 
-
-
-
     public override void abstractUpdate() {
         if (Input.GetKey(KeyCode.A)) {
             //turn right for bottom
@@ -15,7 +12,7 @@ public class TopDragger : DraggerAbstract {
             // turn left for bottom
         }
 
-        if (Input.GetKey(KeyCode.LeftControl)) {
+        if (Input.GetKey(KeyCode.S)) {
             OnKeyDown();
         }
     }

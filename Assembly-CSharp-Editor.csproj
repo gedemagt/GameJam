@@ -62,6 +62,21 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr3.Runtime">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="NCalc">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
+ </Reference>
+ <Reference Include="QPhysics">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -94,18 +109,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="QPhysics">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
- </Reference>
- <Reference Include="Antlr3.Runtime">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="NCalc">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

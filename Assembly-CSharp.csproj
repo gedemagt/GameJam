@@ -57,23 +57,29 @@
      <Compile Include="Assets\Scripts\QFrameEdits\DraggerAbstract.cs" />
      <Compile Include="Assets\Scripts\QFrameEdits\TopDragger.cs" />
      <Compile Include="Assets\Scripts\TestingDragger.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="QPhysics">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Antlr3.Runtime">
  <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ </Reference>
  <Reference Include="NCalc">
  <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
+ </Reference>
+ <Reference Include="QPhysics">
+ <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
