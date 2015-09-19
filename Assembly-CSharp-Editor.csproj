@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{A439A31B-26E1-86F0-75C6-D0758B686B67}</ProjectGuid>
+	<ProjectGuid>{86892CB5-AA99-BA73-E94B-A7D1C9B3DF2F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -47,9 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\QuantumFrame\DrawerEditor.cs" />
      <Compile Include="Assets\Editor\QuantumFrame\QFrameEditor.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -64,21 +61,6 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="Antlr3.Runtime">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
- </Reference>
- <Reference Include="NCalc">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
- </Reference>
- <Reference Include="QPhysics">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -113,6 +95,18 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="QPhysics">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr3.Runtime">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="NCalc">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
+ </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
  </Reference>
@@ -122,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{2AD89CF3-024A-F3AB-6322-311C52B8B828}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

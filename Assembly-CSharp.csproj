@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{2AD89CF3-024A-F3AB-6322-311C52B8B828}</ProjectGuid>
+	<ProjectGuid>{35223D1A-0ABA-3E00-D682-2F913F0EB5DC}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,33 +53,29 @@
      <Compile Include="Assets\QFrame\Scripts\MeshBuilder.cs" />
      <Compile Include="Assets\QFrame\Scripts\QFrame.cs" />
      <Compile Include="Assets\QFrame\Scripts\Target.cs" />
+     <Compile Include="Assets\Scripts\BallController.cs" />
+     <Compile Include="Assets\Scripts\Paddle.cs" />
      <Compile Include="Assets\Scripts\QFrameEdits\BottomDragger.cs" />
      <Compile Include="Assets\Scripts\QFrameEdits\DraggerAbstract.cs" />
      <Compile Include="Assets\Scripts\QFrameEdits\TopDragger.cs" />
      <Compile Include="Assets\Scripts\TestingDragger.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="Antlr3.Runtime">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
+ <Reference Include="QPhysics">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/LitJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr3.Runtime">
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="NCalc">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
- </Reference>
- <Reference Include="QPhysics">
- <HintPath>C:/Users/duemo/Documents/Development/Work/Aarhus University/Unity/GameJamPingPong/Assets/QFrame/Scripts/lib/QPhysics.dll</HintPath>
+ <HintPath>D:/Programmering/Unity/GameJam/GameJam/Assets/QFrame/Scripts/lib/NCalc.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
