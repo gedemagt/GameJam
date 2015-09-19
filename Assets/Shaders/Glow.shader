@@ -1,7 +1,7 @@
 ﻿Shader "Custom/Glow" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
-		_GlowColor ("Glow Color", Color ) = ( 1.0, 1.0, 1.0, 1.0 )
+		_GlowColor ("Glow Color", Color ) = ( 0.0, 1.0, 0.0, 1.0 )
 		_Frequency( "Glow Frequency", Float ) = 1.0
 		_MinPulseVal( "Minimum Glow Multiplier", Range( 0, 1 ) ) = 0.5
 	}
