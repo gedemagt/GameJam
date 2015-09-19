@@ -16,7 +16,7 @@ public class BallController : MonoBehaviour {
 	void Update () {
 	if (Input.GetMouseButtonDown (0)) {
 			transform.position = init;
-			rb.AddForce(2, -10 * 10, 0);
+			rb.AddForce(-50, -5, 0);
 		}
 		if (Input.GetMouseButtonDown (1)) {
 			transform.position = init;
