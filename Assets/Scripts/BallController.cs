@@ -14,14 +14,7 @@ public class BallController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	if (Input.GetMouseButtonDown (0)) {
-			transform.position = init;
-			rb.AddForce(-10, -50, 0);
-		}
-		if (Input.GetMouseButtonDown (1)) {
-			transform.position = init;
-			rb.AddForce(-2, 10 * 10, 0);
-		}
+
 	}
 
 	public float bounciness;
