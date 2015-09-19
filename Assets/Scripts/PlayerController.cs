@@ -8,10 +8,11 @@ public class PlayerController : MonoBehaviour {
     public Paddle paddle;
     public Goal goal;
     public Text text;
-    private int count = 0;
+    public int count = 0;
     public int level1 = 5;
     public int level2 = 8;
     public KeyCode cheater;
+    public Animation animation;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour {
     private void OnCount()
     {
         count++;
-        text.text = count.ToString();
+        animation.Play();
         if (count == level1) frame.setLevel("id1");
         if (count == level2) paddle.scaleAccordingToVariance = true;
     }
