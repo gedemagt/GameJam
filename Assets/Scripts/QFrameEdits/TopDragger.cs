@@ -14,6 +14,7 @@ public class TopDragger : DraggerAbstract {
 
         if (Input.GetKey(KeyCode.S)) {
             OnKeyDown();
+            
         }
     }
 }
