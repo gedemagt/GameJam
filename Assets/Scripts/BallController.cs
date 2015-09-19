@@ -3,14 +3,22 @@ using System.Collections;
 
 public class BallController : MonoBehaviour {
 	Rigidbody rb;
+    private Vector3 StartPos;
+    public Vector3 StartVelocity;
 
-	private Vector3 init;
 	// Use this for initialization
 	void Start () {
 		bounciness = Mathf.Clamp(bounciness, 0f, 1f);
 		rb = GetComponent<Rigidbody>();
-		init = transform.position;
+        StartPos = transform.position;
+        Reset();
 	}
+
+    public void Reset()
+    {
+        transform.position = StartPos;
+        transform.GetComponent<Rigidbody>().velocity = StartVelocity;
+    }
 	
 	// Update is called once per frame
 	void Update () {

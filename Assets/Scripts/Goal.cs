@@ -20,6 +20,6 @@ public class Goal : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         Count++;
-        collision.gameObject.GetComponent<BallManager>().Reset();
+        collision.gameObject.GetComponent<BallController>().Reset();
     }
 }
