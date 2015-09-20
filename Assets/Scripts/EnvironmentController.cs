@@ -6,6 +6,7 @@ public class EnvironmentController : MonoBehaviour {
     public GameObject background;
     public float rotateionCounter = 0;
     public GameObject crowd;
+    public Image[] crowdColor;
     public AudioClip cheering;
     public Goal goalLeft;
     public Goal goalRight;
@@ -60,7 +61,8 @@ public class EnvironmentController : MonoBehaviour {
 
     void CallFromGoal() {
         if (player1.count >= 10 || player2.count >= 10 && Menu.enabled == false) {
-            UpDown(true);
+            string playerWon = player2.count >= 10 ? "player2" : "player1";
+            UpDown(true, playerWon);
             Menu.enabled = true;
         }
 
@@ -75,11 +77,14 @@ public class EnvironmentController : MonoBehaviour {
 
     }
 
-    void UpDown(bool up) {
+    void UpDown(bool up, string winner) {
         spawner.DoStop();
         if (up) {
             iTween.MoveBy(crowd, new Vector3(0f, 3f, 0), 1);
             gameObject.GetComponent<AudioSource>().clip = cheering;
+            for (int i = 0; i < crowdColor.Length; i++) {
+                crowdColor[i].color = winner == "player2" ? Color.red : Color.green;
+            }
             gameObject.GetComponent<AudioSource>().Play();
         }
         if (!up) {
