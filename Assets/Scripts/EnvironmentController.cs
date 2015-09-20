@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnvironmentController : MonoBehaviour {
     public GameObject background;
@@ -8,9 +9,30 @@ public class EnvironmentController : MonoBehaviour {
     public AudioClip cheering;
     public Goal goalLeft;
     public Goal goalRight;
+    public Button startRestart;
 
     public PlayerController player1;
     public PlayerController player2;
+
+    public Canvas Menu;
+    GameObject[] catBalls;
+
+    public void StartGame() {
+
+       GameObject[] catBalls = GameObject.FindGameObjectsWithTag("CatBall");
+        foreach (var item in catBalls) {
+            item.transform.position = item.GetComponent<BallController>().initPosition;
+            
+        }
+        player1.count = 0;
+        player2.count = 0;
+        Menu.enabled = false;
+
+    }
+
+    public void ExitGame() {
+        Application.Quit();
+    }
 
     // Use this for initialization
     void Start () {
@@ -19,8 +41,12 @@ public class EnvironmentController : MonoBehaviour {
     }
 
     void CallFromGoal() {
-        if (player1.count >= 10) UpDown(true);
-        if (player2.count >= 10) UpDown(false);
+        if (player1.count >= 10 || player2.count >= 10) {
+            UpDown(true);
+            Menu.enabled = true;
+        }
+
+
     }
 	
 	// Update is called once per frame
