@@ -55,7 +55,7 @@ public class ParticleSpawner : MonoBehaviour {
         {
             if (Time.time - lasttime > 0.1)
             {
-                float ySpeed = Random.Range(-3.5f, 0.0f);
+                float ySpeed = Random.Range(-3.5f, -1f);
                 float sign = (float)Mathf.Sign(Random.Range(-1.0f, 1.0f));
                 GameObject particle = (GameObject)Instantiate(prefab, transform.position, Quaternion.identity);
                 particle.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, ySpeed, 0.0f);

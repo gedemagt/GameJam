@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Paddle : MonoBehaviour {
 
@@ -14,6 +15,14 @@ public class Paddle : MonoBehaviour {
     BallController attachedBall;
     public Vector3 shootVelocity;
     public KeyCode shoot;
+	public Sprite[] lightningArray;
+	public Image lighting;
+	private bool isBallAttached = false;
+	private int lightCounter = 0;
+    public Sprite[] explosionArray;
+    public Image explosion;
+    private int explosionCounter = 0;
+    private bool explode = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +33,24 @@ public class Paddle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (isBallAttached) {
+			lighting.gameObject.SetActive(true);
+			lighting.sprite = lightningArray[lightCounter];
+			lightCounter++;
+			if (lightCounter >= 8) lightCounter = 0;
+		}
+
+        if (explode) {
+            explosion.gameObject.SetActive(true);
+            explosion.sprite = explosionArray[explosionCounter];
+            explosionCounter++;
+            if (explosionCounter >= 14) {
+                explosionCounter = 0;
+                explode = false;
+                explosion.gameObject.SetActive(false);
+            }
+
+        }
         float x = frame.localAxis.physicsXToUnity(frame.getXMean());
         transform.localPosition = new Vector3(x, transform.localPosition.y, transform.localPosition.z);
         velocity = (frame.worldAxis.physicsXToUnity(frame.getXMean()) - lastX) / Time.deltaTime;
@@ -46,8 +73,13 @@ public class Paddle : MonoBehaviour {
 
     public void Attach(BallController ball)
     {
-        attachedBall = ball;
-        ball.isAttached = true;
+		if (ball != null) {
+
+			attachedBall = ball;
+			ball.isAttached = true;
+			isBallAttached = true;
+		}
+
     }
 
     public void Detatch()
@@ -58,6 +90,9 @@ public class Paddle : MonoBehaviour {
             attachedBall.isAttached = false;
         }
         attachedBall = null;
+		isBallAttached = false;
+		lighting.gameObject.SetActive(false);
+        explode = true;
     }
 
     public float GetVelocity() { return velocity; }

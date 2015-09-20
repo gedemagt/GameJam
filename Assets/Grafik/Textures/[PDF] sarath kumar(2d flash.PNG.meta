@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: eeb8fc1864de7574bb5628c4b4e165b5
+timeCreated: 1442717318
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: '[PDF] sarath kumar(2d flash_0'
+    21300002: '[PDF] sarath kumar(2d flash_1'
+    21300004: '[PDF] sarath kumar(2d flash_2'
+    21300006: '[PDF] sarath kumar(2d flash_3'
+    21300008: '[PDF] sarath kumar(2d flash_4'
+    21300010: '[PDF] sarath kumar(2d flash_5'
+    21300012: '[PDF] sarath kumar(2d flash_6'
+    21300014: '[PDF] sarath kumar(2d flash_7'
+    21300016: '[PDF] sarath kumar(2d flash_8'
+    21300018: '[PDF] sarath kumar(2d flash_9'
+    21300020: '[PDF] sarath kumar(2d flash_10'
+    21300022: '[PDF] sarath kumar(2d flash_11'
+    21300024: '[PDF] sarath kumar(2d flash_12'
+    21300026: '[PDF] sarath kumar(2d flash_13'
+    21300028: '[PDF] sarath kumar(2d flash_14'
+    21300030: '[PDF] sarath kumar(2d flash_15'
+    21300032: '[PDF] sarath kumar(2d flash_16'
+    21300034: '[PDF] sarath kumar(2d flash_17'
+    21300036: '[PDF] sarath kumar(2d flash_18'
+    21300038: '[PDF] sarath kumar(2d flash_19'
+    21300040: '[PDF] sarath kumar(2d flash_20'
+    21300042: '[PDF] sarath kumar(2d flash_21'
+    21300044: '[PDF] sarath kumar(2d flash_22'
+    21300046: '[PDF] sarath kumar(2d flash_23'
+    21300048: '[PDF] sarath kumar(2d flash_24'
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: '[PDF] sarath kumar(2d flash_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 930.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_1'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 930.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_2'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 930.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_3'
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 930.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_4'
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 930.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_5'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 698.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_6'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 698.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_7'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 698.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_8'
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 698.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_9'
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 698.400024
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_10'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 466.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_11'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 466.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_12'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 466.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_13'
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 466.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_14'
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 466.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_15'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_16'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 234.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_17'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 234.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_18'
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 234.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_19'
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 234.399994
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_20'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.3999939
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_21'
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2.3999939
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_22'
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2.3999939
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_23'
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2.3999939
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: '[PDF] sarath kumar(2d flash_24'
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2.3999939
+        width: 320
+        height: 232.600006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

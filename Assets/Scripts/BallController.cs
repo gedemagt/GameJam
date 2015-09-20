@@ -22,6 +22,8 @@ public class BallController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.R))
+			rb.AddForce (new Vector3 (Random.Range (-3, 3), 0, 0));
         AnimateCat();
     }
 
@@ -48,6 +50,7 @@ public class BallController : MonoBehaviour {
 	void FixedUpdate()
 	{
 		lastVelocity = rb.velocity;
+        if (lastVelocity.magnitude < 4.0) lastVelocity = lastVelocity.normalized * 4.0f;
 	}
 
     public Transform paddleTransform;
@@ -55,6 +58,7 @@ public class BallController : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
 	{
         if(collision.transform.tag != null) {
+            if (isAttached) return;
             switch (collision.transform.tag) {
                 case "RightQFrame":
                     bloodAniCount = 0;
@@ -82,7 +86,7 @@ public class BallController : MonoBehaviour {
             Vector3 relPos = contactPoint - paddlePos;
             relPos.z = 0;
             Vector3 relPosNorm = relPos / relPos.magnitude;
-            rb.velocity = rb.velocity.magnitude * relPosNorm;
+            rb.velocity = lastVelocity.magnitude * relPosNorm;
         }
 
         foreach (ContactPoint c in collision.contacts)
@@ -93,9 +97,8 @@ public class BallController : MonoBehaviour {
         normal.Normalize();
 
         Vector3 inVelocity = lastVelocity;
-
-        Wall wall = collision.transform.GetComponent<Wall>();
-        if (wall != null)
+		
+        if (collision.transform.tag != null && collision.transform.tag == "Wall")
         {
             //          outVelocity += Vector3.left * paddle.GetVelocity();
             Vector3 outVelocity = bounciness * (-2f * (Vector3.Dot(inVelocity, normal) * normal) + inVelocity);
