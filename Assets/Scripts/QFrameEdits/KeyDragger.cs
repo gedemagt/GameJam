@@ -66,6 +66,7 @@ public class KeyDragger : MonoBehaviour {
 
             frame.reset();
             frame.start();
+            refresh();
             isReset = false;
             offset = gameObject.transform.position;
         
