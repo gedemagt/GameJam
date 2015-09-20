@@ -20,6 +20,7 @@ public class Goal : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         spawner.HitGoal(collision.gameObject, left);
-        onCount();
+		Debug.Log (collision.gameObject.GetComponent<BallController> ().hasHit);
+        if(collision.gameObject.GetComponent<BallController>().hasHit) onCount();
     }
 }

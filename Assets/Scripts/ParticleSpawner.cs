@@ -44,7 +44,7 @@ public class ParticleSpawner : MonoBehaviour {
             ball.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, ySpeed, 0.0f);
             signs.Add(ball, sign);
             activeBalls.Add(ball);
-        
+
 
     }
 	
