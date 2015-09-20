@@ -12,6 +12,7 @@ public class EnvironmentController : MonoBehaviour {
     public Button startRestart;
     public Sprite retardCat;
     public Image spriteCat;
+    public Image tearImageRight;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -43,6 +44,11 @@ public class EnvironmentController : MonoBehaviour {
     }
 
     public void ExitGame() {
+        tearImageRight.enabled = true;
+    }
+
+    IEnumerator ExitingGame() {
+        yield return new WaitForSeconds(1);
         Application.Quit();
     }
 
