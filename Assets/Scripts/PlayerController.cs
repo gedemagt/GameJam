@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCount()
     {
-        if (count >= maxCount)
+        if (count <= maxCount)
         {
             count++;
             animation.Play();
@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour {
         if (count == level1) frame.setLevel("id1");
         if (count == level2) paddle.scaleAccordingToVariance = true;
     }
+
+
 
     public void Reset()
     {
