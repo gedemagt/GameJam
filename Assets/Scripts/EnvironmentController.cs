@@ -80,7 +80,7 @@ public class EnvironmentController : MonoBehaviour {
     void UpDown(bool up, string winner) {
         spawner.DoStop();
         if (up) {
-            iTween.MoveBy(crowd, new Vector3(0f, 3f, 0), 1);
+            iTween.MoveBy(crowd, new Vector3(0f, 1f, 0), 1);
             gameObject.GetComponent<AudioSource>().clip = cheering;
             for (int i = 0; i < crowdColor.Length; i++) {
                 crowdColor[i].color = winner == "player2" ? Color.red : Color.green;
