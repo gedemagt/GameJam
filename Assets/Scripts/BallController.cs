@@ -19,6 +19,11 @@ public class BallController : MonoBehaviour {
 		bounciness = Mathf.Clamp(bounciness, 0f, 1f);
 		rb = GetComponent<Rigidbody>();
 	}
+
+    void Reset()
+    {
+        startPaddle.Attach(this);
+    }
 	
 	// Update is called once per frame
 	void Update () {

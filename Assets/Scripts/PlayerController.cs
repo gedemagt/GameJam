@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public int level2 = 8;
     public KeyCode cheater;
     public Animation animation;
+    public int maxCount = 9;
 
 	// Use this for initialization
 	void Start () {
@@ -24,10 +25,21 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCount()
     {
-        count++;
-        animation.Play();
+        if (count >= maxCount)
+        {
+            count++;
+            animation.Play();
+        }
         if (count == level1) frame.setLevel("id1");
         if (count == level2) paddle.scaleAccordingToVariance = true;
+    }
+
+    public void Reset()
+    {
+        count = 0;
+        animation.Play();
+        frame.setLevel("id2");
+        paddle.scaleAccordingToVariance = false;
     }
 	
 	// Update is called once per frame
