@@ -33,6 +33,7 @@ public class BallController : MonoBehaviour {
 
     IEnumerator AnimateBlood() {
         yield return new WaitForEndOfFrame();
+		if (bloodAniCount <= 13) 
         bloodSprite.sprite = bloodSplatterArray[bloodAniCount];
         bloodAniCount++;
 
