@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour {
         if (count == level2) paddle.scaleAccordingToVariance = true;
     }
 
+
+
     public void Reset()
     {
         count = 0;
