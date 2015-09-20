@@ -5,6 +5,16 @@ public class ParticleSpawner : MonoBehaviour {
 
     public GameObject prefab;
     public Vector3 Bfield = new Vector3(0, 10, 0);
+	bool isRunning;
+
+	public void DoStart() {
+		InstantiateBall ();
+		startTime = Time.time;
+		isRunning = true;
+	}
+	public void DoStop() {
+		isRunning = false;
+	}
 
     int left;
     int right;
@@ -50,6 +60,8 @@ public class ParticleSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!isRunning)
+			return;
         float time = Time.time;
         if (time - startTime > dt)
         {

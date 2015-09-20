@@ -14,6 +14,8 @@ public class EnvironmentController : MonoBehaviour {
     public PlayerController player1;
     public PlayerController player2;
 
+    public ParticleSpawner spawner;
+
     public Canvas Menu;
     GameObject[] catBalls;
 
@@ -59,6 +61,7 @@ public class EnvironmentController : MonoBehaviour {
     }
 
     void UpDown(bool up) {
+        spawner.DoStop();
         if (up) {
             iTween.MoveBy(crowd, new Vector3(0f, 3f, 0), 1);
             gameObject.GetComponent<AudioSource>().clip = cheering;
