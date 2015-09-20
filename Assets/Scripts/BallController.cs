@@ -36,7 +36,7 @@ public class BallController : MonoBehaviour {
         bloodSprite.sprite = bloodSplatterArray[bloodAniCount];
         bloodAniCount++;
 
-        if (bloodAniCount <= 13)
+        if (bloodAniCount <= 13) 
             StartCoroutine(AnimateBlood());
 
     }
