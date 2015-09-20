@@ -13,8 +13,10 @@ public class BallController : MonoBehaviour {
     private int catAniCount = 0;
     private int bloodAniCount = 0;
     public bool isAttached = false;
+    public Vector3 initPosition;
 	// Use this for initialization
 	void Start () {
+        initPosition = transform.position;
         startPaddle.Attach(this);
 		bounciness = Mathf.Clamp(bounciness, 0f, 1f);
 		rb = GetComponent<Rigidbody>();
