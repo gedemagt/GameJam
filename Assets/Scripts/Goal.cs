@@ -7,6 +7,7 @@ public class Goal : MonoBehaviour {
     public Paddle left;
     public delegate void OnCount();
     public OnCount onCount;
+    public ParticleSpawner spawner;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class Goal : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        left.Attach(collision.gameObject.GetComponent<BallController>());
+        spawner.HitGoal(collision.gameObject, left);
         onCount();
     }
 }

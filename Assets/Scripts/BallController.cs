@@ -14,17 +14,19 @@ public class BallController : MonoBehaviour {
     private int bloodAniCount = 0;
     public bool isAttached = false;
     public Vector3 initPosition;
+    public bool hasHit = false;
+    
 	// Use this for initialization
 	void Start () {
         initPosition = transform.position;
-        startPaddle.Attach(this);
+        //startPaddle.Attach(this);
 		bounciness = Mathf.Clamp(bounciness, 0f, 1f);
 		rb = GetComponent<Rigidbody>();
 	}
 
     void Reset()
     {
-        startPaddle.Attach(this);
+        //startPaddle.Attach(this);
     }
 	
 	// Update is called once per frame
@@ -71,11 +73,13 @@ public class BallController : MonoBehaviour {
                     bloodAniCount = 0;
                     StartCoroutine(AnimateBlood());
                     transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.red);
+                    hasHit = true;
                     break;
                 case "LeftQFrame":
                     bloodAniCount = 0;
                     StartCoroutine(AnimateBlood());
                     transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.green);
+                    hasHit = true;
                     break;
                 default:
                     break;
@@ -94,6 +98,7 @@ public class BallController : MonoBehaviour {
             relPos.z = 0;
             Vector3 relPosNorm = relPos / relPos.magnitude;
             rb.velocity = lastVelocity.magnitude * relPosNorm;
+            hasHit = true;
         }
 
         foreach (ContactPoint c in collision.contacts)

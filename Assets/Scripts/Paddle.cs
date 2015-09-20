@@ -75,6 +75,7 @@ public class Paddle : MonoBehaviour {
     {
 		if (ball != null) {
 
+            ball.hasHit = true;
 			attachedBall = ball;
 			ball.isAttached = true;
 			isBallAttached = true;
