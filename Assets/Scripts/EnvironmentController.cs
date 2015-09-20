@@ -10,6 +10,8 @@ public class EnvironmentController : MonoBehaviour {
     public Goal goalLeft;
     public Goal goalRight;
     public Button startRestart;
+    public Sprite retardCat;
+    public Image spriteCat;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -20,13 +22,20 @@ public class EnvironmentController : MonoBehaviour {
     GameObject[] catBalls;
 
     public void StartGame() {
-       GameObject[] catBalls = GameObject.FindGameObjectsWithTag("CatBall");
+        StartCoroutine(StartingGame());
+        spriteCat.sprite = retardCat;
+    }
+
+    IEnumerator StartingGame() {
+
+        yield return new WaitForSeconds(0.1f);
+        GameObject[] catBalls = GameObject.FindGameObjectsWithTag("CatBall");
         foreach (var item in catBalls) {
-            item.GetComponent<BallController>().Reset();            
+            item.GetComponent<BallController>().Reset();
         }
         player1.Reset();
         player2.Reset();
-        
+
         //player1.count = 0;
         //player2.count = 0;
         Menu.enabled = false;
