@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCount()
     {
-        if (count >= maxCount)
+        if (count <= maxCount)
         {
             count++;
             animation.Play();

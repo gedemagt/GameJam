@@ -18,14 +18,15 @@ public class EnvironmentController : MonoBehaviour {
     GameObject[] catBalls;
 
     public void StartGame() {
-
        GameObject[] catBalls = GameObject.FindGameObjectsWithTag("CatBall");
         foreach (var item in catBalls) {
-            item.transform.position = item.GetComponent<BallController>().initPosition;
-            
+            item.GetComponent<BallController>().Reset();            
         }
-        player1.count = 0;
-        player2.count = 0;
+        player1.Reset();
+        player2.Reset();
+        
+        //player1.count = 0;
+        //player2.count = 0;
         Menu.enabled = false;
 
     }
@@ -41,7 +42,7 @@ public class EnvironmentController : MonoBehaviour {
     }
 
     void CallFromGoal() {
-        if (player1.count >= 10 || player2.count >= 10) {
+        if (player1.count >= 10 || player2.count >= 10 && Menu.enabled == false) {
             UpDown(true);
             Menu.enabled = true;
         }

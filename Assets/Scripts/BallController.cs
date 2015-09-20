@@ -22,7 +22,7 @@ public class BallController : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 	}
 
-    void Reset()
+    public void Reset()
     {
         startPaddle.Attach(this);
     }
