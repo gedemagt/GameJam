@@ -7,8 +7,11 @@ public class BallController : MonoBehaviour {
     public Vector3 StartVelocity;
     public Paddle startPaddle;
     public Sprite[] catBall;
+    public Sprite[] bloodSplatterArray;
     public Image imageSprite;
+    public Image bloodSprite;
     private int catAniCount = 0;
+    private int bloodAniCount = 0;
     public bool isAttached = false;
 	// Use this for initialization
 	void Start () {
@@ -28,7 +31,17 @@ public class BallController : MonoBehaviour {
         if (catAniCount >= 12) catAniCount = 0;
     }
 
-	public float bounciness;
+    IEnumerator AnimateBlood() {
+        yield return new WaitForEndOfFrame();
+        bloodSprite.sprite = bloodSplatterArray[bloodAniCount];
+        bloodAniCount++;
+
+        if (bloodAniCount <= 13)
+            StartCoroutine(AnimateBlood());
+
+    }
+
+    public float bounciness;
 	private Vector3 lastVelocity;
 	
 	void FixedUpdate()
@@ -43,9 +56,13 @@ public class BallController : MonoBehaviour {
         if(collision.transform.tag != null) {
             switch (collision.transform.tag) {
                 case "RightQFrame":
+                    bloodAniCount = 0;
+                    StartCoroutine(AnimateBlood());
                     transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.red);
                     break;
                 case "LeftQFrame":
+                    bloodAniCount = 0;
+                    StartCoroutine(AnimateBlood());
                     transform.GetComponent<TrailRenderer>().material.SetColor("_TintColor", Color.green);
                     break;
                 default:
