@@ -1,20 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnvironmentController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\QuantumCarnival2D\Assets\UserAndParse\FacebookJavascript\ParseManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\BallController.cs" Line="79" Column="39" />
-      <File FileName="Assets\QFrame\Scripts\QFrame.cs" Line="1" Column="1" />
-      <File FileName="Assets\QFrame\Scripts\Dragger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\HeatDistort.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ParticleSpawner.cs" Line="9" Column="1" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\Pixelplacement\iTween\Sample\MoveSample.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\VertextModifier.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Paddle.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WallController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Goal.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnvironmentController.cs" Line="81" Column="1" />
+      <File FileName="..\QuantumCarnival2D\Assets\Scripts\GUIController.cs" Line="187" Column="41" />
+      <File FileName="..\QuantumCarnival2D\Assets\UserAndParse\FacebookJavascript\ParseManager.cs" Line="169" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -14,6 +14,7 @@ public class EnvironmentController : MonoBehaviour {
     public Sprite retardCat;
     public Image spriteCat;
     public Image tearImageRight;
+    private bool gamePlayed = false;
 
     public PlayerController player1;
     public PlayerController player2;
@@ -29,7 +30,7 @@ public class EnvironmentController : MonoBehaviour {
     }
 
     IEnumerator StartingGame() {
-
+        if (gamePlayed) UpDown(false, "player1");
         yield return new WaitForSeconds(0.1f);
         GameObject[] catBalls = GameObject.FindGameObjectsWithTag("CatBall");
         foreach (var item in catBalls) {
@@ -41,7 +42,7 @@ public class EnvironmentController : MonoBehaviour {
         //player1.count = 0;
         //player2.count = 0;
         Menu.enabled = false;
-
+        gamePlayed = true;
     }
 
     public void ExitGame() {
@@ -53,17 +54,25 @@ public class EnvironmentController : MonoBehaviour {
         Application.Quit();
     }
 
+    IEnumerator ShowMenu() {
+
+        yield return new WaitForSeconds(3);
+        Menu.enabled = true;
+    }
+
     // Use this for initialization
     void Start () {
+
         goalLeft.onCount += CallFromGoal;
         goalRight.onCount += CallFromGoal;
     }
 
     void CallFromGoal() {
+
         if (player1.count >= 10 || player2.count >= 10 && Menu.enabled == false) {
             string playerWon = player2.count >= 10 ? "player2" : "player1";
             UpDown(true, playerWon);
-            Menu.enabled = true;
+            StartCoroutine(ShowMenu());
         }
 
 
@@ -80,7 +89,7 @@ public class EnvironmentController : MonoBehaviour {
     void UpDown(bool up, string winner) {
         spawner.DoStop();
         if (up) {
-            iTween.MoveBy(crowd, new Vector3(0f, 1f, 0), 1);
+            iTween.MoveBy(crowd, new Vector3(0f, 2.5f, 0), 1);
             gameObject.GetComponent<AudioSource>().clip = cheering;
             for (int i = 0; i < crowdColor.Length; i++) {
                 crowdColor[i].color = winner == "player2" ? Color.red : Color.green;
@@ -88,7 +97,7 @@ public class EnvironmentController : MonoBehaviour {
             gameObject.GetComponent<AudioSource>().Play();
         }
         if (!up) {
-            iTween.MoveBy(crowd, new Vector3(0f, -3f, 0), 1);
+            iTween.MoveBy(crowd, new Vector3(0f, -2.5f, 0), 1);
             gameObject.GetComponent<AudioSource>().Stop();
         }
 
